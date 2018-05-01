@@ -1,0 +1,714 @@
+<html>
+	<head>
+	    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>GEOSAFE Workshop Presentation</title>
+
+        <meta name="description" content="Remote sensing and fire slides">
+        <meta name="author" content="Veronica Andreo">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/osgeo.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+<!--   <link href="https://fonts.googleapis.com/css?family=Miriam+Libre" rel="stylesheet"> -->
+<style>
+/* miriam-libre-regular - latin */
+@font-face {
+  font-family: 'Miriam Libre';
+  font-style: normal;
+  font-weight: 400;
+  src: url('lib/font/miriam-libre/miriam-libre-v1-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Miriam Libre'), local('MiriamLibre-Regular'),
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-regular.svg#MiriamLibre') format('svg'); /* Legacy iOS */
+}
+
+/* miriam-libre-700 - latin */
+@font-face {
+  font-family: 'Miriam Libre';
+  font-style: normal;
+  font-weight: 700;
+  src: url('lib/font/miriam-libre/miriam-libre-v1-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Miriam Libre Bold'), local('MiriamLibre-Bold'),
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('lib/font/miriam-libre/miriam-libre-v1-latin-700.svg#MiriamLibre') format('svg'); /* Legacy iOS */
+}
+
+/* sintony-regular - latin */
+@font-face {
+  font-family: 'Sintony';
+  font-style: normal;
+  font-weight: 400;
+  src: url('lib/font/sintony/sintony-v4-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Sintony'),
+       url('lib/font/sintony/sintony-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('lib/font/sintony/sintony-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('lib/font/sintony/sintony-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('lib/font/sintony/sintony-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('lib/font/sintony/sintony-v4-latin-regular.svg#Sintony') format('svg'); /* Legacy iOS */
+}
+
+/* sintony-700 - latin */
+@font-face {
+  font-family: 'Sintony';
+  font-style: normal;
+  font-weight: 700;
+  src: url('lib/font/sintony/sintony-v4-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Sintony Bold'), local('Sintony-Bold'),
+       url('lib/font/sintony/sintony-v4-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('lib/font/sintony/sintony-v4-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('lib/font/sintony/sintony-v4-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('lib/font/sintony/sintony-v4-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('lib/font/sintony/sintony-v4-latin-700.svg#Sintony') format('svg'); /* Legacy iOS */
+}
+</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+<!-- Presentation -->
+<section id="Presentation">
+    <h1>A wide view over Remote Sensing for Fire Mapping</h1>
+    <p style="margin-top:1.5em">
+        <a href="https://research.utwente.nl/en/persons/veronica-carolina-andreo"><b>Dr. Veronica Andreo</b></a>
+    </p>
+    <p class="title-foot" style="font-size:85%; margin-top:0.9em">
+        <a href="https://www.itc.nl/EOS" title="EOS">Department of Earth Observation Sciences,</a><br>
+        <a href="https://www.itc.nl/" title="ITC">Faculty of Geo-Information Science and Earth Observation</a><br>
+        <a href="https://www.utwente.nl/" title="UTwente">University of Twente</a>
+    </p>
+	<img style="margin-top:2em" width="100" src="img/ITC-logo.png">
+   	<img style="margin-top:2em" width="250" src="img/Geosafe_logo_EU.png">
+    <p style="margin-top:1.5em"><small>Workshop On Stochastic Mapping Of Bushfires</small></p>
+    <p><small>Enschede, 29-30/01/18</small></p>
+</section>
+
+
+<!-- Fire as seen by S2 - Example from Australia - Jan 18 -->
+<section id="Pilliga_S2_a">
+	<h1>How do we see fire from space?</h1>
+	<p style="font-size:80%;">Wildfire in Pilliga National Park, New South Wales, Australia. Jan 18, 2018.</p>
+	<div style="position:relative; width:640px; height:480px; margin:0 auto;">
+		<img class="fragment fade-out" data-fragment-index="0" width="640" height="480" src="img/Sentinel-2_1C_2018-01-18_true_color.jpg" style="position:absolute;top:0;left:0;"/>
+		<img class="fragment fade-in" data-fragment-index="0" width="640" height="480" src="img/Sentinel-2_L1C_2018-01-18_swir.jpg" style="position:absolute;top:0;left:0;" />
+	</div>
+	<p style="font-size:80%;">
+		Copernicus Sentinel 2B - True color composition and SWIR band.<br>
+		<small>Source: 
+		<a href="https://apps.sentinel-hub.com/eo-browser/#lat=-30.826780904779774&lng=149.29595947265625&zoom=10&time=2018-01-18&preset=1_TRUE_COLOR&datasource=Sentinel-2%20L1C" alt="Sentinel-hub EO browser" target="_blank">Sentinel-hub EO browser</a></small>
+	</p>
+</section>
+
+
+<!-- Fire as seen by S2 - Example from Australia - Jan 23 -->
+<section id="Pilliga_S2_b">
+	<h1>How do we see fire from space?</h1>
+	<p style="font-size:80%;">Wildfire in Pilliga National Park, New South Wales, Australia. Jan 23, 2018.</p>
+	<div style="position:relative; width:640px; height:480px; margin:0 auto;">
+		<img width="640" height="480" src="img/Sentinel-2_L1C_2018-01-23_swir.jpg">
+	</div>
+	<p style="font-size:80%;">
+		Copernicus Sentinel 2B - SWIR band.<br>
+		<small>Source: 
+		<a href="https://apps.sentinel-hub.com/eo-browser/#lat=-30.845352659402337&lng=149.2815399169922&zoom=11&time=2018-01-23&preset=6-SWIR&datasource=Sentinel-2%20L1C" alt="Sentinel-hub EO browser" target="_blank">Sentinel-hub EO browser</a></small>
+	</p>
+</section>
+
+
+<!-- Index -->
+<section id="Index" data-background-image="img/Sentinel-2_L1C_2018-01-18_swir.jpg" style="text-align:left;">
+	<h1 style="color:white;">Presentation Overview</h1>
+	<ol style="margin-top: 0.5em;color:white;">
+		<li>Basics of RS for fire detection and mapping</li>
+		<li>Remote sensing of active fires (AF)</li>
+		<li>Remote sensing of burned areas (BA)</li>
+		<li>Spectral indices and burn severity</li>
+		<li>Online monitoring and forecast systems</li>
+		<li>Latest developments in burned area mapping</li>
+	</ol>
+</section>
+
+
+<!-- Basics of fire and rs - Vertical slides -->
+<section id="RS_fire_basics">
+
+
+	<section id="RS_fire_basics_1">
+		<h1>Remote sensing for fire detection and mapping</h1>
+		<div class="left">
+			<ul>
+				<p style="font-size:80%;"><strong>Fire</strong> is a disturbance factor and an agent of environmental change with local to regional impacts on land use, productivity, carrying capacity and biodiversity, and regional to global impacts on hydrological, biogeochemical and atmospheric processes.
+				<p style="font-size:80%;"><strong>Space-borne sensors</strong> provide a unique perspective to monitor and study the global distribution and characteristics of fire. Data from RS have been used to:
+				<ul style="text-align:left;">
+					<li style="font-size:65%;">monitor smoke plumes,</li>
+					<li style="font-size:65%;">monitor flaming and smouldering fire locations and timing,</li>
+					<li style="font-size:65%;">monitor/estimate the extent of fire-affected areas,</li>
+					<li style="font-size:65%;">characterize various fire properties.</li>
+				</ul>			
+			</ul>
+		</div>
+		<div class="right" style="vertical-align: middle">
+			<img src="img/PilligaFire_aerial.jpg" alt="Fire" width="70%" ><figcaption><small>Pilliga Fire - Jan 2018</small></figcaption>
+			<p>
+			<img src="img/PilligaFire_control_center.jpg" alt="Fire" width="70%"><figcaption><small>Center of operations - Jan 2018</small></figcaption>
+		</div>
+	</section>
+
+
+	<section id="RS_fire_basics_2">
+		<h1>Remote sensing for fire detection and mapping</h1>
+		<p style="text-align:left;">In the early days...<br>
+		<ul style="font-size:85%;">
+			<li>satellite fire maps were obtained by <strong>visual photo-interpretation</strong> techniques (highly time consuming and expensive)</li>
+		</ul>
+		<p style="text-align:left;margin-top:0.5em">Nowadays...<br>
+		<ul style="font-size:85%;">
+			<li>satellite fire maps are more usually generated <strong>automatically</strong> (through science algorithms and digital image processing software)</li>
+			<li>users of satellite fire information (resource managers, scientists and policy makers) increasingly expect systematically generated, well-characterized satellite fire products to be available <strong>online</strong></li>
+		</ul>
+	</section>
+
+
+	<section id="RS_fire_basics_3">
+		<h1>Remote sensing for fire detection and mapping</h1>
+		<ul>
+			<p style="text-align:left;">Only <strong>cost-effective source of information</strong> for mapping AF and BA from <strong>regional/national up to global</strong> scale.
+			<p style="text-align:left;">Only source of information for large area/global studies, for multi-temporal analyses and for <strong>areas where ground data are lacking or are not publicly available</strong>.
+		</ul>
+		<img src="img/FIRMS_banner.png" alt="FIRMS" align="middle" width="90%"><figcaption><small>Active fires Near Real Time - MODIS Terra & Aqua</small></figcaption>
+	</section>
+	
+	
+	<section id="RS_fire_basics_4">
+		<h1>Remote sensing for fire detection and mapping</h1>
+		<p style="text-align:left;margin-top:0.5em">What does a sensor need to detect fire and map burned areas?
+		<ul style="margin-top:0.4em;font-size:80%;">
+			<li>It should measure reflected or emitted electromagnetic radiation at certain wavelengths, especially <strong>MIR/TIR (for AF detection) and NIR + SWIR (for BA mapping)</strong></li>
+			<li>It should have <strong>short revisit time and (moderate/high) spatial resolution</strong></li>
+		</ul>
+		<img src="img/satellite_bands.jpg" class="stretch" style="background:none; border:4px solid #eeeeee; box-shadow:0 0 10px rgba(0, 0, 0, 0.15);">
+	</section>
+	
+	
+	<section id="RS_fire_basics_5">
+		<h1>Remote sensing for fire detection and mapping</h1>
+		<p style="font-size:85%;">2 main approaches:</p>
+		<ul style="font-size:85%;">
+			<li><strong>thermal contrast</strong> of active fires with regards to the surrounding background</li>
+			<li><strong>reflectance changes</strong> caused by burning effects (changing of leaf and soil colour, leaf losses, char background, ash, etc.) </li>
+		</ul>
+		<img src="img/flames.jpg" width="33%">
+		<img src="img/forest_after_fire.jpg" width="33%">
+		<p style="font-size:120%"><strong>Hybrid approach</strong></p>
+<!--
+		* The former approach is more reliable because thermal radiance increases exponentially with temperature, while fire-related reflectance changes are more subtle. 
+		However, thermal signal lasts very shortly, whereas post-fire reflectance changes last much longer (days to years). 
+		* First approach will only see what is actually burning when the satellite observes the area (sample of fires), while reflectance changes are noticeable in the whole area affected by the fire (providing the impact of fire is severe enough).
+		**Hybrid algorithms** use AF information either to guide the characterisation of BA statistics or to confirm potential burned pixels. The use of thermal anomalies helps avoiding commission errors related to reflectance changes caused by non-fire events (such as crop harvest, seasonal flooding, or topographic shades), which are not associated to sharp increases of temperature.
+-->
+	</section>
+	
+	
+	<!-- Spectral signatures -->
+	<section id="RS_fire_basics_6">
+		<h1>Spectral signatures of burned vs unburned areas</h1>
+		<img src="img/barc_spectral_response.jpg" width="70%" style="background:none; border:4px solid #eeeeee; box-shadow:0 0 10px rgba(0, 0, 0, 0.15);">
+		<p style="margin-top:3em;text-align:right"><small><a href="#/Spectral_indices_1">Spectral Indices</a></small></p>
+	</section>
+
+
+	<section id="RS_fire_basics_7">
+		<h1>Spectral signatures of burned vs unburned areas</h1>
+		<img src="img/ss_l8.png" width="63%">
+		<img src="img/L8_rgb765_18Jan2018.png" width="35%">
+	</section>
+	
+	<section id="RS_fire_basics_8">
+		<h1>Spectral signatures of burned vs unburned areas</h1>
+		<img src="img/ss_s2.png" width="63%">
+		<img src="img/S2B_rgb11128A_18Jan2018.png" width="35%">
+	</section>
+	
+<!--
+	<section id="RS_fire_basics">
+		<h1>Remote sensing for fire detection and mapping</h1>
+		<ul style="font-size:85%;">
+			<li>Global/Continental scale</li>
+				<ul>
+					<li>Geostationary satellite images (high acquisition frequency): MVIRI, SEVIRI, GOES and ENVISAT MERIS</li>
+					<li>Polar orbiting satellites are the most widely exploited: MODIS, NOAA/AVHRR, SPOT-VGT, ATSR/AATSR and VIIRS</li>
+				</ul>
+			<li >Regional scale and heterogeneous environments</li>
+				<ul>
+					<li class="fragment highlight-red">Landsat TM/ETM+ & L8-OLI (more recently)</li>
+					<li>ASTER</li>
+					<li>Ikonos</li>
+					<li>Copernicus Sentinel(s): 1A/B & 2A/B</li>
+				</ul> 
+		</ul>
+		<p style="font-size:85%;text-align:left" class="fragment fade-up"><a href="https://lta.cr.usgs.gov/welduswk.html" target="_blank"><strong>Web Enabled Landsat Data (WELD)</strong></a> for CONUS on a weekly and annual basis & <a href="https://lta.cr.usgs.gov/USLSArdTile" target="_blank"><strong>Analysis ready data (ARD)</strong></a> for CONUS, Alaska & Hawai
+	</section>
+-->
+
+
+</section>
+
+
+<!-- Topics in RS of fire -->
+<section>
+	<h1>Satellite Remote Sensing of fire</h1>
+	<ol>
+		<li>Smoke</li>
+		<li>Flaming and smouldering fires: Active Fires (AF)</li>
+		<li>Fire affected areas: Burned Areas (BA)</li>
+		<li>Fire characteristics: Fire Regime</li>
+	</ol>
+	<img src="img/fire_wide.jpg" width="90%" class="stretch">
+</section>
+
+
+<!-- Smoke -->
+<section id="Smoke">
+	<h1>Smoke</h1>
+	<ul style="font-size:90%;">
+		<li>Smoke might obscure the detection/mapping of fire in VIS and parts of the IR spectrum</li>
+		<li>Smoke plume and smoke dispersion info is needed for air quality & public health applications</li>
+		<li>There are algorithms to detect smoke and separate it from clouds</li>
+	</ul>
+	<img src="img/Sentinel-2_L1C_2018-01-18_true_color_smoke.jpg" alt="Smoke" width="45%">
+	<img src="img/Sentinel-2_L1C_2018-01-18_false_color_smoke.jpg" alt="Smoke" width="45%">
+	<p><small>Left: True color, Right: False color composition. Source: Sentinel-hub EO browser.</small></p>
+</section>
+
+
+<!-- Active fire -->
+<section id="Active_Fire">
+
+<section id="Active_Fire_1" class="img_right">
+	<h1>Active Fires</h1>
+	<p><img src="img/VIIRS_MODIS_AF_australia.png" alt="FIRMS" width="50%"></p>
+	<ul style="font-size:90%;text-align:left;">
+		<li>AF are rather easily <strong>detected with MIR and TIR</strong> bands (evident in the VIS if fire size is large and energy is high)</li>
+		<li>The information about AF, i.e. <strong>location, date and time</strong>, is basic for numerous applications including <em>fire management, fire suppression and early warning</em> for fires in the vicinity of critical infrastructures</li>
+		<li>AF detections from polar-orbiting satellites <strong>undersample the temporal dynamics</strong> of fire (satellite overpass time and clouds) and the <strong>spatial extent</strong> of BA where the fire progresses rapidly across the landscape</li>
+<!--
+		<li>Fires much smaller than the spatial resolution of the remotely sensed data can be detected: MODIS algorithm can detect flaming fires with a >50% probability if the area is greater than 100 m2 in a 1 km2 pixel. This minimum detection area is smallest for fires in forest environments (10–100 m2) and is biggest for fires in savanna environments (100–1000 m2).</li>
+-->
+	</ul>
+</section>
+
+
+<section id="Active_Fire_2">
+	<h1>Active Fires</h1>
+	<h2>Satellites used for AF detection</h2>
+	<ul>
+		<li>NOAA - AVHRR</li>
+		<li>NOAA - GOES</li>
+		<li>METEOSAT</li>
+		<li>VIRS - TRMM</li> <!--Visible and Infrared Scanner (VIRS) on board the NASA Tropical Rainfall Measuring Mission (TRMM) -->
+		<li>ATSR</li> <!-- ESA Along-Track Scanning Radiometer (ATSR) and Advanced ATSR -->
+		<li class="fragment highlight-red">MODIS - Terra & Aqua</li>
+		<li class="fragment highlight-red">VIIRS - Suomi NPP</li>
+	</ul>
+</section>
+
+
+<section id="Active_Fire_3">
+	<h1>Active Fires</h1>
+	<h2>Algorithms for AF detection</h2>
+	<ul>
+		<li>Simple: 
+			<ul>
+				<li><strong>Empirical thresholds</strong> based on MIR or TIR bands (day and/or night satellite overpasses)</li>
+			</ul></li>
+		<li>More complex: 
+			<ul>
+				<li><strong>Contextual algorithms</strong> that use thresholds in MIR/TIR bands and rejection of false positives according to bright temperature of neighbour pixels (MODIS AF product)</li>
+				<li class="fragment highlight-red">Provide more reliable and consistent AF monitoring</li>
+			</ul></li>
+	</ul>	
+</section>
+
+
+<section id="Active_Fire_4">
+	<h1>Active Fires</h1>
+	<h2>Operative products</h2>
+	<ul style="font-size:90%;text-align:left;">
+		<li><strong>MODIS: </strong><a href="https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/c6-mcd14dl" target="_blank">MCD14ML</a> (1000 m, daily, 2001-present, Day & Night)</li>
+		<li><strong>VIIRS: </strong><a href="https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/v1-vnp14imgt" target="_blank">VNP14IMGTDL_NRT</a> (375 m, daily, 2012-present, Day & Night)</li>
+		<li><strong>AVHRR: </strong><a href="http://www.ssd.noaa.gov/PS/FIRE/Layers/FIMMA/fimma.html" target="_blank">FIMMA</a> (1100 m, daily, only USA)</li>
+	</ul>
+	<img src="img/VIIRS_MODIS_AF_australia.png" alt="FIRMS" align="middle" width="70%">
+<!--
+In  order  to  detect  the  presence  of  fire  in  a  non-interactive fashion, a set of detection criteria different for the day and night fire observations are prescribed. These  multipsectral criteria are based on the  apparent  temperature  of  the  fire  pixel and the difference between the fire pixel and its background temperature. MIR (21-22) and TIR (31) bands.
+-->
+</section>
+
+
+</section>
+
+
+<!-- Burned area -->
+<section id="Burned_Area">
+
+	<section id="Burned_Area_1">
+		<h1>Burned Area</h1>
+		<ul>
+			<li>Support for numerous research and operational applications in resource management, environmental assessment and post-fire remediation.</li>
+			<li>Used to estimate gas emissions, needed for climate models and projections of climate change.</li>
+		</ul>
+		<div class="columns" style="margin-top:0.5em">
+			<div class="column" style="width:47%;text-align:left;">
+				<p>Fires produce <strong>black char and ashes</strong> (complete combustion)</p>
+				<p>Changes are <strong>non-permanent</strong>, they will last from weeks to years according to conditions in the area (wind, rain, vegetation re-growth)</p>
+			</div>
+			<div class="column" style="width:47%;">
+				<p><img src="img/forest_after_fire.jpg" width="90%"></p>
+			</div>
+		</div>
+	</section>
+
+
+	<section  id="Burned_Area_2">
+		<h1>Burned Area</h1>
+		<h2>Algorithms for BA mapping</h2>
+		<ul>
+			<li><strong>Visual interpretation</strong> and application of <strong>empirical spectral thresholds</strong> to individual satellite bands (esp. pre- and post-fire)</li>
+			<li><strong>Spectral band ratios</strong>, esp. those based on NIR (~0.8 μm) and SWIR (~1.6-2.2 μm) reflectance (best differenciation)</li>
+			<li>Automated methods</li>
+		</ul>
+	</section>
+
+
+	<section  id="Burned_Area_3">
+		<h1>Burned Area</h1>
+		<h2>Algorithms for BA mapping</h2>
+		<ul style="font-size:80%">
+			<li>Automated methods
+				<ul>
+					<li>definition of the <strong>magnitude of spectral change</strong> is critical</li> <!-- depends on the fraction burned and the combustion completeness-->
+					<li>multi-temporal data and a <strong>change detection scheme</strong> to take advantage of the "temporal persistency" of fire effects</li>
+					<li>challenge is to <strong>map only the fire-affected area</strong> and not other changes: flooding, snow melt, rapid vegetation senescence, cloud shadows and ploughing of agricultural fields</li>
+					<li><strong>several methods used</strong> at different scales applied to either multi-temporal or single images: supervised classifications (maximum likelihood, decision trees, random forest, SVM and neural networks), segmentation/OBIA, linear transformations (tasselled cap and PCA), spectral unmixing techniques, and logistic regression models</li></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+
+
+	<section  id="Burned_Area_4">
+		<h1>Burned Area</h1>
+		<h2>Algorithms for BA mapping in operative products</h2>
+		<p style="text-align:left">First BA products:<br>
+			<ul style="font-size:85%;">
+				<li>Search for a <strong>drop in SWIR & increase in TIR</strong> plus multi-temporal criteria to reject false positives (NOAA-AVHRR, ATSR, MCD45)</li>
+			</ul>
+		<p style="text-align:left;margin-top:0.5em">Most recent BA products:<br>
+			<ul style="font-size:85%;">
+				<li><strong>Hybrid algorithms</strong> that use the AF to define the magnitude of spectral change associated with fire, so AF are used as seeds and BA are then mapped by contextual algorithms such as growing regions (MCD64, Fire_CCI)</li>
+			</ul>
+	</section>
+
+
+	<section  id="Burned_Area_5">
+		<h1>Burned Area</h1>
+		<h2>Operative products</h2>
+		
+		<img src="img/table_BA_products.png" class="stretch" style="background:none; border:4px solid #eeeeee; box-shadow:0 0 10px rgba(0, 0, 0, 0.15);"><figcaption><small>Source: <a href="https://www.sciencedirect.com/science/article/pii/S0034425715001078?via%3Dihub">Alonso-Canas & Chuvieco (2015)</a></small></figcaption>
+		
+		<p style="font-size:70%;margin-top:2em"><strong>Links to BA products' websites: </strong><a href="http://due.esrin.esa.int/page_project24.php" target="_blank">GLOBSCAR</a>,
+		<a href="http://due.esrin.esa.int/page_project43.php" target="_blank">GLOBCARBON</a>,
+		<a href="http://forobs.jrc.ec.europa.eu/products/burnt_areas_gba2000/gba_data.php" target="_blank">GBA2000</a>,
+		<a href="http://forobs.jrc.ec.europa.eu/products/burnt_areas_L3JRC/download_l3jrc.php" target="_blank">L3JRC</a>,
+		<a href="https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mcd45a1" target="_blank">MCD45A1</a>,
+		<a href="https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mcd64a1_v006" target="_blank">MCD64A1</a>,
+		<a href="https://geogra.uah.es/fire_cci/" target="_blank">ESA Fire_CCI</a>,
+		<a href="http://www.globalfiredata.org/analysis.html" target="_blank">GFED</a>,
+		<a href="http://forobs.jrc.ec.europa.eu/products/fire_probability_82-99/global-prob_82-99.php" target="_blank">GBS</a>.</p>
+	<!--
+	MCD45A1, is based on temporal differences of observed versus predicted reflectance using the inversion of a bidirectional reflectance model. 
+	MCD64A1 is based on a hybrid algorithm combining active fire detections and multi-temporal changes in spectral indices 
+	-->
+	</section>
+
+	<section  id="Burned_Area_5b">
+		<h1>Burned Area</h1>
+		<h2>Operative products</h2>
+		<img src="img/mcd64_black_saturday.png" class="stretch" style="background:none; border:4px solid #eeeeee; box-shadow:0 0 10px rgba(0, 0, 0, 0.15);">
+	</section>
+
+
+	<section  id="Burned_Area_6">
+		<h1>Burned Area</h1>
+		<h2>Application of BA products</h2>
+		<ul>
+			<li>Fire hazard assessment for ecosystem management (daily products, finer spatial resolution for better delineation of fire contours and long time series for better understanding of fire regime)</li>
+			<li>Early warning fire alert systems and survey (better timing and low omission errors)</li>
+			<!-- early warning is important for an early extintion of fire and prevention of major losses -->
+			<li>Atmospheric chemistry</li>
+			<li>Biogeochemical models</li>
+			<li>Dynamic global vegetation models</li>
+		</ul>
+	</section>
+	
+	
+	<section  id="Burned_Area_7">
+		<h1>Burned Area</h1>
+		<h2>Accuracy of BA products</h2>
+		<ul>
+			<li>Limitations to detect small fires (thresholds observed range between 100 and 120 ha)</li>
+			<li>Limitations to detect low intensity fires (common in savannas, agricultural fields and shrublands)</li>
+			<li>Accuracies can fall to 40% in some biomes or when using coarser resolution sensors</li>
+			<li>Issues of temporal reporting</li>
+		</ul>
+	</section>
+
+
+	<!--
+	<section  id="Burned_Area_8">
+		<h1>Burned Area</h1>
+		<h2>Requirements for BA products</h2>
+		<ul style="font-size:65%">
+			<li>Long-term series data for understanding the long-term fire, climate and vegetation interaction. These series can be generated from various sensors but temporal consistence should be assured.</li>
+			<li>Temporal stability and consistency, within 5%.</li>
+			<li>Temporal resolution, daily data with original spatial resolution of the sensor, weekly, 10-day or monthly basis on global scale.</li>
+			<li>Spatial resolution, originally 250 m (or minimum 500 m), horizontal resolution 1 km acceptable, 0.5 degree or higher resolution on global scale.</li>
+			<li>Accuracy: highest standard 5% (maximum error of omission and commission), with demonstrated systematic and adequate validation using internationally agreed validation protocol.</li>
+			<li>Error tractability and uncertainty characterization, in a manner that can be easily understood and utilized by users in various applications.</li>
+			<li>Easy access to data, including auxiliary information and metadata on vegetation cover, burn severity etc.</li>
+		</ul>
+	</section>
+	-->
+
+</section>
+
+
+<!-- Fire regime -->
+<section id="Fire_regime">
+	<h1>Fire regime</h1>
+	<p style="text-align:left">Fire regime is described by:
+	<ul>
+		<li class="fragment highlight-green">Frequency</li>
+		<li class="fragment highlight-green">Seasonality</li>
+		<li class="fragment highlight-blue">Spread pattern</li>
+		<li>Intensity</li>
+		<li>Fuel consumption</li>
+		<li class="fragment grow">Severity</li>
+	</ul>
+<!--
+	Active research field, but no reliable systematically generated satellite product
+	Only freq and seasonality can be derived from satellite with "reliability" 
+	Spread pattern might be obtained but the result is highly dependent on spatial and temporal resolution 
+	Severity is measured by (multi-temporal) spectral indices (next section)
+-->
+</section>
+
+
+<!-- Spectral indices -->
+<section id="Spectral indices">
+
+	<section id="Spectral_indices_1">
+		<h1>Spectral Indices</h1>
+		<p style="font-size:80%">Based on the differences in the <a href="#/RS_fire_basics_6">spectral signature</a> of burned and unburned vegetation</p>
+		<ul style="font-size:70%">
+			<li><strong>Burned Area Index</strong>: BAI = 1 / (NIR - 0.06)^2 + (RED - 0.1)^2</li>
+			<li><strong>Global Environmental Monitoring Index</strong>: GEMI = η (1 − 0.25 η) - (RED - 0.125) / (1 - RED)</li>
+			<li><strong>Burned Area Index Modified</strong>: BAIM = 1 / ((NIR - 0.05)^2 + (SWIR - 0.2)^2)</li>
+			<li><strong>Normalized Burned Ratio</strong>: NBR = (NIR - SWIR) / (NIR + SWIR)</li>
+			<li><strong>Mid-Infrared Burned Index</strong>: MIRBI = 10 * SWIRL - 9.8 * SWIRS + 2</li>
+		</ul>
+		<p class="fragment fade-right" style="font-size:80%;margin-top:0.9em;"><strong>NDVI</strong>, <strong>EVI</strong> and <strong>LST</strong> are also used, as well as combinations such as LST/EVI or d(LST/EVI)</p>
+		<p style="text-align:left;font-size:50%;margin-top:2.5em;"><b>References</b>:<br>
+		η = (2 * (NIR^2 - RED^2) + 1.5 NIR + 0.5 RED) / (NIR + RED + 0.5)<br>
+		RED: Red reflectance<br>
+		NIR: Near Read Infrared reflectance<br>
+		SWIR: might be SWIRS or SWIRL<br>
+		SWIRS: Short Wave Infrared Short reflectance (~ 1.6 μm)<br>
+		SWIRL: Short Wave Infrared Long reflectance (~ 2.2 μm)<br>
+		
+		<!-- BAI shows a high discrimination ability for burned areas in the R-NIR spectral domain
+		The use of a multi-index approach (i.e. a method based on the evaluation of multiple Spectral Indices with thresholds applied to identify burned areas) (either multi-date or single-date) to map BA poses certain major issues that remain unsolved, such as selecting a set of suitable indices and the generalization power of the thresholds used.
+		Burned areas exhibit a wide range of spectral characteristics as a function of the site and fire event (e.g. pre-fire vegetation type and conditions, background soil, fire severity and post-fire processes) and of the observation conditions (e.g. atmospheric conditions, geometry of acquisition, and time between image acquisition and fire date). Hence, threshold-based approaches can give good results for a particular region/land cover, but the accuracy can drastically change over a different region/land cover thus jeopardizing the robustness of the algorithm. 
+			
+		Spectral indices based on the opposite response of Near Infrared (NIR) and Short Wave Infrared (SWIR) regions, specifically the NBR and its bi-temporal approach called dNBR, are considered a reference for burn severity mapping. Although some authors have found their performance suboptimal, other indices based on NBR have been proposed obtaining good results, for instance the RdNBR and the RBR, calculated by relativizing the bi-temporal NBR with the pre-fire NBR. Other reflective metrics, such the typical vegetation NDVI and EVI indices have been used in burn severity assessments, both mono and bi-temporal approaches obtaining good results. Additionally, in recent years, thermal infrared data is starting to be used for burn severity assessments, but there are few studies assessing their bi-temporal approach . Thermal remotely sensed information can be easily transformed to land surface temperature (LST), which is a function of soil and air temperature, both of which are positively related to burn severity. Other authors have sought to improve the functioning of the reflective indices incorporating a thermal component, resulting in mixed burn severity indices that could outperform reference indices such as dNBR. Therefore, numerous spectral metrics from Landsat data to quantify burn severity can be found, but there is no consensus about the most appropriate alternative, highlighting the importance of developing more specific research.
+	
+		https://www.skywatch.co/blog/assessing-impact-wildfire-normalized-burn-ratio-satellite -->
+	</section>
+	
+	
+	<section>
+		<div style="position:relative; width:640px; height:480px; margin:0 auto;">
+			<img class="fragment fade-out" data-fragment-index="0" width="640" height="480" src="img/l8_NBR.png" style="position:absolute;top:0;left:0;"/>
+			<img class="fragment fade-in" data-fragment-index="0" width="640" height="480" src="img/s2_NBR.png" style="position:absolute;top:0;left:0;"/>
+		</div>
+	</section>
+
+
+	<section id="Spectral indices 2">
+		<h1>Indices for Landsat TM/ETM+ & Landsat 8</h1>
+		<img src="img/SI_L7_and_L8.png" style="background:none; border:4px solid #eeeeee; box-shadow:0 0 10px rgba(0, 0, 0, 0.15);">
+		<figcaption><small>Source: <a href="https://www.sciencedirect.com/science/article/pii/S0034425717306041?via%3Dihub">Fernandez-Garcia et al. (2018)</a></small></figcaption>
+	</section>
+	
+	
+	<section id="Spectral_indices_3">
+		<h1>Spectral Indices for Sentinel 2</h1>
+		<div class="columns">
+			<div class="column" style="width:47%;">
+				<img src="img/SI_S2_bands.png" width="90%">
+			</div>
+			<div class="column" style="width:47%;">
+				<img src="img/S2_bands.png" width="95%">
+				<p style="text-align:left;margin-top:1em">Indices based on <strong>red-edge bands</strong> from S2 resulted better qualified for BA mapping and burn severity discrimination
+				<p style="text-align:right;margin-top:6em"><small>Source: <a href="https://www.sciencedirect.com/science/article/pii/S0303243416300368?via%3Dihub">Fernandez-Manso et al. (2016)</a></small>
+			</div>
+		</div>
+	</section>
+	
+	
+	<section id="Spectral_indices_4">
+		<h1>Burn Severity</h1>
+		<p style="text-align:left;font-size:85%;">Burn severity is of great value in defining <b>emergency areas</b>, especially in those ecosystems dominated by obligate seeders or with high vulnerability to soil erosion. It is also important in the context of <b>post-fire remediation</b>: subsidies, help, tax exemptions.
+		<p style="text-align:left;font-size:85%;margin-top:0.5em">Severity is estimated with bi-temporal spectral indices considering <strong>pre- and post-fire</strong> scenes, for example:
+		<ul style="font-size:85%;margin-top:0.5em">
+			<li><strong>dNBR</strong> = NBRpre-fire - NBRpost-fire * 1000</li>
+			<li><strong>RdNBR</strong> = deltaNBR / sqrt( abs(NBRpre-fire) )</li>
+			<li><strong>RNBR</strong> = deltaNBR / NBRpre-fire + 1.001</li>
+			<li><strong>d(LST/EVI)</strong> = LSTpost-fire / EVIpost-fire - LSTpre-fire / EVIpre-fire</li>
+			<li><strong>dNBR-EVI</strong> = (dNBR - EVI * 1000) - offset </li>
+		</ul>
+<!-- We proposed the dNBR-EVI index as a potential improvement of traditional NBR-based indices for initial assessments of burn severity
+expected enhanced sensitivity to physical or bio-physical parameters such as: 
+(1) the reflectance related to the internal structure of the leaves and the canopy density, retrieved by the NIR band, on which both components of the new index (dNBR and EVI) are supported; 
+(2) the reflectance related to the moisture content of both vegetation and soil, retrieved by the SWIR band of the dNBR component, but attenuated by the inclusion of the post-fire EVI for better transferability among climates; and 
+(3) the reflectance related to the post-fire photosynthetic pigments, by the inclusion of Red and Blue bands from the EVI index, for better detection of senescent leaves in initial assessments.
+Furthermore, the dNBR-EVI combination attempts to solve the saturation problem of traditional NBR-based indices when estimating severely burned areas, by including the EVI index that has demonstrated not to be saturated.
+-->
+
+<!--
+g.region align=S2_e745b516_dffd_40d1_9eb5_088374b39924_20180118T031534_B12_20m -p
+B8=S2_e745b516_dffd_40d1_9eb5_088374b39924_20180118T031534_B08_10m
+B12=S2_e745b516_dffd_40d1_9eb5_088374b39924_20180118T031534_B12_20m
+r.mapcalc expression="s2_NBR = float($B8-$B12) / float($B8+$B12)"
+
+g.region align=LC08_L1TP_091081_20180117_20180118_01_RT_sr_band7
+B5=LC08_L1TP_091081_20180117_20180118_01_RT_sr_band5
+B7=LC08_L1TP_091081_20180117_20180118_01_RT_sr_band7
+r.mapcalc expression="l8_NBR = float($B5-$B7) / float($B5+$B7)"
+-->
+	</section>
+
+</section>
+
+
+<!-- Monitoring -->
+<section id="Online">
+	<h1>Online AF and BA monitoring and risk forecast systems</h1>
+	<ul>
+		<li><a href="http://gwis.jrc.ec.europa.eu/static/gwis_current_situation/public/index.html" target="_blank">GWIS</a></li>
+		<li><a href="http://www.globalfiredata.org/analysis.html" target="_blank">GFED</a></li>
+		<li><a href="https://firms2.modaps.eosdis.nasa.gov/map/" target="_blank">FIRMS</a></li>
+		<li><a href="http://fires.globalforestwatch.org/map" target="_blank">GFW</a></li>
+		<li><a href="https://sentinel.ga.gov.au/#/" target="_blank">Sentinel Hotspots (AU)</a></li>
+		<li><a href="https://www.mtbs.gov/viewer/index.html" target="_blank">MTBS (CONUS)</a></li>
+		<li><a href="http://www.firenorth.org.au/nafi3/" target="_blank">Firenorth (North AU)</a></li>
+		<li><a href="http://meteo.caearte.conae.gov.ar/wrf/fuego.html" target="_blank">FFDI (Argentina)</a></li>
+		<li><a href="http://cwfis.cfs.nrcan.gc.ca/interactive-map?zoom=3&lon=425000&lat=1865000&month=01&day=27&year=2018#wb-cont" target="_blank">CWFIS (Canada)</a></li>
+	</ul>
+</section>
+
+
+<!-- New developments/perspectives -->
+<section id="New_developments">
+	<h1>Latest developments in BA mapping</h1>
+	<p style="text-align:left;">New algorithms are being developed and tested in order to produce global BA products at regional/landscape scale:
+	<ul>
+<!--
+		<li>Merged MODIS + Landsat data</li>
+-->
+		<li>Landsat TM/ETM+ and Landsat 8 OLI
+			<ul>
+				<li style="font-size:85%;text-align:left" class="fragment fade-up"><a href="https://lta.cr.usgs.gov/welduswk.html" target="_blank"><strong>Web Enabled Landsat Data (WELD)</strong></a> for CONUS on a weekly and annual basis & <a href="https://lta.cr.usgs.gov/USLSArdTile" target="_blank"><strong>Analysis ready data (ARD)</strong></a> for CONUS, Alaska & Hawai</li>
+				<li style="font-size:85%;text-align:left" class="fragment fade-up"><a href="https://www.sciencebase.gov/catalog/item/57867943e4b0e02680c14fec" target="_blank"><strong>Landsat Burned Area Esential Climate Variable (BAECV)</strong> for CONUS. Period 1984-2017. (Gradient boosted regression models)</a></li>
+		</ul></li>
+		<li>Merged Landsat + Sentinel 2</li>
+<!--
+		burn severity indexes: to increase the response time, while not waiting for landsat to pass again
+-->
+		<li>Sentinel (1 and 2)</li> 
+<!--
+		s1 esp for tropical areas always covered by clouds
+-->
+	</ul>
+<!--
+Several alternative, hybrid, multi-sensor approaches can be found in the literature [29–32], but, for the moment, those methods have not yet delivered a final, ready-to-use product.
+-->
+</section>
+
+
+<!-- Thanks -->
+<section id="last">
+	<h1 class="fragment grow">Thanks much for your attention!</h1>
+	<img style="margin-top:1.5em" width="100" src="img/ITC-logo.png">
+   	<img style="margin-top:1.5em" width="250" src="img/Geosafe_logo_EU.png">
+</section>
+
+<!--
+<section>
+	<section id="gfed" data-background-iframe="http://www.globalfiredata.org/analysis.html"><h1>Global Fire Emissions Database (GFED)</h1></section>
+	<section id="gwis" data-background-iframe="http://gwis.jrc.ec.europa.eu/static/gwis_current_situation/public/index.html"><h1>Global Wildfire Information System (GWIS)</h1></section>
+	<section id="firms" data-background-iframe="https://firms2.modaps.eosdis.nasa.gov/"><h1>Fire Information for Resource Management System (FIRMS)</h1></section>
+	<section id="gfw" data-background-iframe="http://fires.globalforestwatch.org/map/?utm_campaign=gfw_fires&utm_source=gfwtwitter&utm_medium=map&utm_term=cafires_12_2017#activeLayers=viirsFires%2CactiveFires%2Cnoaa18Fires%2CburnScars%2Ctwitter&activeBasemap=dark-gray&x=144&y=-36&z=6"><h1>Global Forest Watch (GFW)</h1></section>
+	<section id="mtbs" data-background-iframe="https://www.mtbs.gov/viewer/index.html"><h1>MTBS (CONUS)</h1></section>
+	<section id="nafi3" data-background-iframe="http://www.firenorth.org.au/nafi3/"><h1>Firenorth</h1></section>
+	<section id="ffdi" data-background-iframe="http://meteo.caearte.conae.gov.ar/wrf/fuego.html"><h1>FFDI</h1></section>
+</section>
+-->
+			</div>
+		</div>
+		<script src="js/reveal.js"></script>
+        <script src="lib/js/head.min.js"></script>
+		<script src="plugin/markdown/marked.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		
+		<script>
+			Reveal.initialize();
+			Reveal.configure({ slideNumber: true, transition: 'convex' });
+		</script>
+		
+		<script>
+            Reveal.initialize({
+                history: true,
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true }
+                ]
+            });
+        </script>
+
+	</body>
+</html>
