@@ -1,0 +1,6 @@
+# exclude 
+*.tif
+*.hdf
+*.docx
+*.gxw
+extras_slide_format.html
