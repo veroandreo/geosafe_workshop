@@ -1,0 +1,60 @@
+html { background-color: inherit; } 
+/*https://github.com/hakimel/reveal.js/issues/668*/
+
+.reveal {font-size: 36px;}
+
+section.level1 {font-size: 125%;}
+section.highlight h2 {background-color: #d3d8f7; }
+
+.reveal blockquote p {width: 98%; }
+
+ol[type="a"] {list-style-type: lower-alpha}
+
+.reveal dl {text-align: left}
+.reveal dt {}
+.reveal dd {margin-left: 2em}
+
+.reveal table {
+    /*width: 98%;*/
+    margin-left:auto; 
+    margin-right:auto;
+    border: 1px solid #666;
+}
+
+/*.reveal table th {text-transform:uppercase;}*/
+.reveal table td, .reveal table th {border: 1px solid #666; 
+				padding: 0px 4px 0px 16px;
+				vertical-align: top;}
+
+.reveal section img {border: 5px; max-height: 570px; width: auto;}
+
+*.reveal h1         {text-shadow: none;line-height: 1;}
+*.reveal section[data-background].light * {color: #f8f8f8}
+*.reveal section[data-background].dark  * {color: #080808}
+
+*.reveal section[data-background] *,
+*.reveal section[data-background-iframe] * {
+    text-shadow: 2px 1px 6px rgba(190,190,190,1.0);
+    /*background: rgba(173,216,230,0.2);*/
+}
+
+.reveal h3 { margin: 35px 0 10px 0;}
+
+/*http://stackoverflow.com/questions/23082660/how-to-style-images-in-reveal-js*/
+.reveal section img { background:none; border:none; box-shadow:none; }
+
+section.img_left img, section.img_left figure
+                                {float: left; margin-right: 20px;}
+section.img_left blockquote 	{z-index: -1;}
+section.img_left blockquote p 	{display: inline !important; text-align: right;}
+section.img_left ul, section.img_left ol {
+                            display: inline !important; 
+                            list-style-position: inside;}
+
+section.img_right img, section.img_right figure {
+                            float: right; margin-left: 20px;}
+section.img_right blockquote 	{z-index: -1;}
+section.img_right blockquote p 	{display: inline !important;}
+section.img_right ul, section.img_right ol {
+                            display: inline !important; 
+                            list-style-position: inside;}
